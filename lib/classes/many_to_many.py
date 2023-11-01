@@ -1,3 +1,4 @@
+from statistics import mean
 class Game:
     all = []
 
@@ -22,6 +23,7 @@ class Game:
 
     def average_score(self, player):
         return sum(player.score for player in self.results()) / len(self.results())
+        # return mean(player.score for player in self.results())
 
 class Player:
     all = []
